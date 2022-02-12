@@ -11,6 +11,9 @@ class Solution:
             else:
                 nums1[m+n-1] = nums2[n-1]
                 n -= 1
-        if n > 0:
-            nums1[:n] = nums2[:n]
+        # if n > 0://Slicing creates an extra copy in python and space may not be O(1) in that case
+        #     nums1[:n] = nums2[:n]
             
+        while n > 0:
+            nums1[n-1] = nums2[n-1]
+            n -= 1
