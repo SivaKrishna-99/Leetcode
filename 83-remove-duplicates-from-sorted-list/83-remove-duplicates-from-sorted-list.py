@@ -8,7 +8,6 @@ class Solution:
         if head == None:
             return 
         curr = head
-        prev = None 
         while curr.next :
             
             if curr.val == curr.next.val:
@@ -16,7 +15,6 @@ class Solution:
                 curr.next = curr.next.next
             
             else:
-                prev = curr
                 curr = curr.next
         return head
             
