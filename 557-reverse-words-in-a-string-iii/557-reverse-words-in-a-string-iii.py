@@ -1,8 +1,8 @@
 class Solution:
     def reverseWords(self, s: str) -> str:
-        s = s.strip().split()
+        words = s.strip().split()
         ans = []
-        for word in s:
+        for word in words:
             l = 0
             r = len(word)-1
             while(l < r):
