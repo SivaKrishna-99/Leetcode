@@ -8,7 +8,7 @@ class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         
         def checker(node,left,right):
-            if node is None:
+            if not node:
                 return True
             if not (node.val < right and node.val > left):
                 return False
