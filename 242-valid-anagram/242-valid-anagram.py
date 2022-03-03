@@ -11,18 +11,17 @@ class Solution:
                 d1[c] += 1
             else:
                 d1[c] = 1
-        for d in t:
-            if d in d2:
-                d2[d] += 1
+        for c in t:
+            if c in d2:
+                d2[c] += 1
             else:
-                d2[d] = 1
-        for a in d1 :
-            
-            if( a not in d2):
+                d2[c] = 1
+        for c in d1 :
+            if( c not in d2):
                 return False
-            elif d1[a] == d2[a]:
+            elif d1[c] == d2[c]:
                 continue
-            else:
+            else:#count of char not same
                 return False
         return True
         
