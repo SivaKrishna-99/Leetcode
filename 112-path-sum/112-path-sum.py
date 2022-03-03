@@ -8,7 +8,6 @@ class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
         t_sum = targetSum
         curr_sum = 0
-        self.helper(root,curr_sum,t_sum)
         return self.helper(root,curr_sum,t_sum)
     
     def helper(self,root,curr_sum,t_sum):
