@@ -8,27 +8,20 @@ class Solution:
     count = 0
     num = float('inf')
     def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
-        
-        # res = []
         if not root:
             return None
         self.helper(root,k)
-        # for i in range(0,k):
-        #     if i == k-1:
-        #         return res[k-1]
         return self.num
     
     def helper(self,root,k):
         if not root :
-            return self.count
-        
+            return 
         self.helper(root.left,k)
         self.count = self.count+1
         if self.count == k:
             self.num = root.val
-        # res.append(root.val)
         self.helper(root.right,k)
+        
        
-        return self.count
             
             
