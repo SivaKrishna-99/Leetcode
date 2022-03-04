@@ -14,12 +14,13 @@ class Solution:
     
     def helper(self,root,k):
         if not root :
-            return 
+            return self.count
         self.helper(root.left,k)
         self.count = self.count+1
         if self.count == k:
             self.num = root.val
         self.helper(root.right,k)
+        return self.count
         
         
     
