@@ -14,7 +14,7 @@ class Solution:
     
     def helper(self,root,k):
         if not root :
-            return self.count
+            return 
         self.helper(root.left,k)
         self.count = self.count+1
         if self.count == k:
