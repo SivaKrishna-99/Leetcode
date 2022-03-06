@@ -18,7 +18,7 @@ class Solution:
             return False
         
         temp = board[i][j]
-        board[i][j] = "0"
+        board[i][j] = None
         res = (self.dfs(i+1,j,m,n,board,k+1,word) or
         self.dfs(i-1,j,m,n,board,k+1,word) or 
         self.dfs(i,j+1,m,n,board,k+1,word) or
