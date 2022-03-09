@@ -22,9 +22,9 @@ class Solution:
         for  num,count in d1.items():
             freq[count].append(num)
         #Traverse from the end of the freq array as we have to print numbers with higher count first
-        for i in range(len(freq)-1,0,-1):
-            for n in freq[i]:
-                res.append(n)
+        for count in range(len(freq)-1,0,-1):
+            for num in freq[count]:
+                res.append(num)
                 if len(res) == k:
                     return res
         
