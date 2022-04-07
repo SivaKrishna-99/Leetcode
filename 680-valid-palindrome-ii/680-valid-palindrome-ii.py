@@ -1,20 +1,15 @@
 class Solution:
     def validPalindrome(self, s: str) -> bool:
-        left , right = 0,len(s)-1
-        
-        while left < right :
+        left , right = 0, len(s)-1
             
-            if s[left] == s[right] :
-                left += 1
-                right -= 1
-            else:
-                if self.isPalindrome(s,left+1,right):
-                    return True
-                    
-                if self.isPalindrome(s,left,right-1):
-                    return True
-                return False
-        return True
+        while left < right:
+                
+            if s[left] != s[right]:
+                return self.isPalindrome(s,left+1,right) or self.isPalindrome(s,left,right-1)
+                #if both left and right char's are equal increment the pointers
+            left += 1
+            right -= 1   
+        return True 
                     
     def isPalindrome(self,s,left,right):
         while left < right :
