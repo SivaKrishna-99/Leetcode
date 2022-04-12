@@ -16,12 +16,8 @@ class Solution:
             else:
                 d += 1
                 print(d)
-        if u == d and l == 0 and r == 0:
-                return True
-        if l == r and u == 0 and d == 0:
-                return True
         if l == r and u ==d :
-                return True
+            return True
         else:
             return False
         
