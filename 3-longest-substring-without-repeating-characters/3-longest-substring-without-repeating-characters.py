@@ -14,11 +14,11 @@ class Solution:
             if s[i] in d1:
                 start = max(start,d1[s[i]]+1)
                 d1[s[i]] = i
-                curr_len = i-start+1
-                max_len = max(curr_len,max_len)
+                # curr_len = i-start+1
+                max_len = max(i-start+1,max_len)
             else:
                 d1[s[i]] = i
-                curr_len = i-start+1
-                max_len = max(curr_len,max_len)
+                # curr_len = i-start+1
+                max_len = max(i-start+1,max_len)
                 
         return max_len
