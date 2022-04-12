@@ -12,10 +12,7 @@ class Solution:
         for i in range(len(s)):
             
             if s[i] in d1:
-                if start > d1[s[i]]:
-                    print("Hello world")
-                else:
-                    start = d1[s[i]]+1
+                start = max(start,d1[s[i]]+1)
                 d1[s[i]] = i
                 curr_len = i-start+1
                 max_len = max(curr_len,max_len)
