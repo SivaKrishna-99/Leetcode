@@ -23,6 +23,7 @@ class Solution:
                 continue
             else:#count of char not same
                 return False
+          
         return True
         
         # s = sorted(s)
