@@ -10,10 +10,10 @@ class Solution:
                 sum = nums[j]+nums[k]
                 if sum == -nums[i]:
                     tripletList.append([nums[i],nums[j],nums[k]])
-                    
-                    j += 1
-                    while nums[j] == nums[j-1] and j < k:
+                    while j < k and nums[j] == nums[j+1] :
                         j += 1
+                    j += 1
+                    
                     
                 elif(sum > -nums[i]):
                     k -= 1
