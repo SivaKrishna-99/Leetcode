@@ -6,13 +6,10 @@ class Solution:
         count = 0
         right = 0
         jump = 0
-        for i in range(len(nums)):
+        for i in range(len(nums)-1):
             right = max(right,i+nums[i])
             if i == jump:
                 jump = right
                 count += 1
-                
-            if jump >= len(nums)-1:
-                break
         return count
         
