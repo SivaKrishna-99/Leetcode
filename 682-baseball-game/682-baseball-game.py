@@ -14,9 +14,11 @@ class Solution:
                 stack.append(stack[-1]+stack[-2])
             
             else:
-                stack.append(int(val))           
-        result = 0
-        for i in range(len(stack)):                      
-            result += stack[i]
-        return result
+                stack.append(int(val))
+        return sum(stack)
+                
+        # result = 0
+        # for i in range(len(stack)):                      
+        #     result += stack[i]
+        # return result
     #return sum(stack)
