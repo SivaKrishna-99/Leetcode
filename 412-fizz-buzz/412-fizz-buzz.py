@@ -1,19 +1,14 @@
 class Solution:
-    def fizzBuzz(self, n: int) -> List[str]:
+    def fizzBuzz(self,n:int)->List[str]:
         answer = []
-        
+        fb_D = {3:'Fizz',5:'Buzz'}#constant space
         for i in range(1,n+1):
-            #This will be able to deal even if the FizzBuzz string size varies.s
             sub_ans = ''
-            if (i%3 == 0) :
-                sub_ans = 'Fizz'
-            if( i%5 == 0):
-                sub_ans += 'Buzz'
+            #this for loop takes constant time as it only has two keys.
+            for key in fb_D.keys():
+                if i%key == 0:
+                    sub_ans += fb_D[key]
             if not sub_ans:
                 sub_ans = str(i)
             answer.append(sub_ans)
-        
         return answer
-        
-
-        
